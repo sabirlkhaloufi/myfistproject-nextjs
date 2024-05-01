@@ -1,14 +1,20 @@
-import React from "react";
+import Link from "next/link";
 import Links from "./links/Links";
-function NavBar() {
+import styles from "./navbar.module.css";
+
+const Navbar = async () => {
+  const session = false;
+
   return (
-    <div>
-      <div>logo</div>
+    <div className={styles.container}>
+      <Link href="/" className={styles.logo}>
+        Logo
+      </Link>
       <div>
-        <Links />
+        <Links session={session} />
       </div>
     </div>
   );
-}
+};
 
-export default NavBar;
+export default Navbar;
