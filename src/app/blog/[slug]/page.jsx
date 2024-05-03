@@ -10,8 +10,6 @@ const SinglePostPage = async ({ params }) => {
 
   const post = await getPost(slug);
 
-  console.log(post.us);
-
   return (
     <div className={styles.container}>
       {post?.img && (

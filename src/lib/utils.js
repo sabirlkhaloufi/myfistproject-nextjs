@@ -10,7 +10,7 @@ const connectToDb = async () => {
     }
 
     const db = mongoose.connect(process.env.MONGO);
-    connection.isConnnected = (await db).Connections[0].readyState; 
+    connection.isConnnected = (await db).Connections[0].readyState;
   } catch (error) {
     console.log(error);
     throw new Error(error);
